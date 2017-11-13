@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 require 'json'
 require 'nokogiri'
+require 'tmpdir'
+
+fail "Needs two arguments, first for non-mixedcontent and second for mixedcontent" if $*.size != 2
 
 directory = Dir.mktmpdir
 cmd = "curl -L https://github.com/EFForg/https-everywhere/archive/master.tar.gz | tar -xzf- --strip-components=5 --directory #{directory} https-everywhere-master/src/chrome/content/rules/"
@@ -10,8 +13,6 @@ exit $?.to_i unless $?.success?
 def is_simple?(rule)
   rule.attributes['from'].value == "^http:" && rule.attributes['to'].value == "https:"
 end
-
-fail "Needs two arguments, first for non-mixedcontent and second for mixedcontent" if $*.size != 2
 
 def write_block(file, list, regexes)
   rules = [{
