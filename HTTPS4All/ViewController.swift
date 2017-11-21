@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  HTTPS All The Things
+//  HTTPS4All
 //
 //  Created by Bouke van der Bijl on 01/11/2017.
 //  Copyright © 2017 Bouke van der Bijl. All rights reserved.

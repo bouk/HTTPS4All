@@ -1,6 +1,6 @@
 //
-//  HTTPS_All_The_ThingsTests.swift
-//  HTTPS All The ThingsTests
+//  HTTPS4AllTests.swift
+//  HTTPS4AllTests
 //
 //  Created by Bouke van der Bijl on 01/11/2017.
 //  Copyright © 2017 Bouke van der Bijl. All rights reserved.
