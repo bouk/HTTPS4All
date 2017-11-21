@@ -6,10 +6,9 @@
 //  Copyright © 2017 Bouke van der Bijl. All rights reserved.
 //
 
+import HTTPS4AllShared
 import UIKit
 import SafariServices
-
-public let ContentBlockerIdentifier = "co.bouk.HTTPSAllTheThings.OnlyHTTPS"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		checkContentBlockerState()
 
-		SFContentBlockerManager.reloadContentBlocker(withIdentifier: ContentBlockerIdentifier) { error in
+		SFContentBlockerManager.reloadContentBlocker(withIdentifier: contentBlockerIdentifier) { error in
 			guard let error = error else { return }
 			print(error.localizedDescription)
 		}
@@ -35,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
 	fileprivate func checkContentBlockerState() {
-		SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: ContentBlockerIdentifier) { (state, error) in
+		SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: contentBlockerIdentifier) { (state, error) in
 			if let state = state {
 				DispatchQueue.main.async {
 					if state.isEnabled {
@@ -62,6 +61,6 @@ extension AppDelegate {
 	}
 
 	private func createEnableAlert() -> UIAlertController {
-		return UIAlertController(title: "Enable Content Blocker", message: "Please open\nSettings → Safari → Content Blockers\nand enable HTTPS All The Things to get started", preferredStyle: .alert)
+		return UIAlertController(title: "Enable Content Blocker", message: "Please open\nSettings → Safari → Content Blockers\nand enable HTTPS4All to get started", preferredStyle: .alert)
 	}
 }

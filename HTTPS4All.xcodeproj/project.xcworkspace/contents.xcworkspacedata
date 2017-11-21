@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HTTPS All The Things.xcodeproj">
+      location = "self:/Users/bouk/src/github.com/bouk/HTTPS All The Things/HTTPS4All.xcodeproj">
    </FileRef>
 </Workspace>

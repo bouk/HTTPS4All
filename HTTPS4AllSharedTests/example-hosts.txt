@@ -1,0 +1,5 @@
+# Example host file
+bouk.co
+https4all.org
+# Some more hosts
+eff.org

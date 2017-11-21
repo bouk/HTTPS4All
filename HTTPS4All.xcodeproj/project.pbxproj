@@ -13,10 +13,16 @@
 		951DC68C1FAA757000B77AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951DC68B1FAA757000B77AE0 /* Assets.xcassets */; };
 		951DC68F1FAA757000B77AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951DC68D1FAA757000B77AE0 /* LaunchScreen.storyboard */; };
 		951DC69A1FAA757000B77AE0 /* HTTPS_All_The_ThingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951DC6991FAA757000B77AE0 /* HTTPS_All_The_ThingsTests.swift */; };
-		951DC6AB1FAA75B100B77AE0 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 951DC6AA1FAA75B100B77AE0 /* blockerList.json */; };
 		951DC6AD1FAA75B100B77AE0 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951DC6AC1FAA75B100B77AE0 /* ContentBlockerRequestHandler.swift */; };
 		951DC6B11FAA75B100B77AE0 /* OnlyHTTPS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 951DC6A81FAA75B100B77AE0 /* OnlyHTTPS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		95D063061FACD8D5006DF2D2 /* blockerList-mixedcontent.json in Resources */ = {isa = PBXBuildFile; fileRef = 95D063051FACD8D5006DF2D2 /* blockerList-mixedcontent.json */; };
+		95A796431FC482BD008B59E2 /* HTTPS4AllShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */; };
+		95A7964A1FC482BD008B59E2 /* HTTPS4AllSharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A796491FC482BD008B59E2 /* HTTPS4AllSharedTests.swift */; };
+		95A7964C1FC482BD008B59E2 /* HTTPS4AllShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 95A7963C1FC482BD008B59E2 /* HTTPS4AllShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95A7964F1FC482BD008B59E2 /* HTTPS4AllShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */; };
+		95A796501FC482BD008B59E2 /* HTTPS4AllShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		95A796591FC482CD008B59E2 /* HTTPS4AllShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */; };
+		95A7965B1FC48382008B59E2 /* HTTPS4AllShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7965A1FC48382008B59E2 /* HTTPS4AllShared.swift */; };
+		95A7965D1FC48A24008B59E2 /* example-hosts.txt in Resources */ = {isa = PBXBuildFile; fileRef = 95A7965C1FC48A24008B59E2 /* example-hosts.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,27 @@
 			remoteGlobalIDString = 951DC6A71FAA75B100B77AE0;
 			remoteInfo = OnlyHTTPS;
 		};
+		95A796441FC482BD008B59E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 951DC6791FAA757000B77AE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95A796391FC482BD008B59E2;
+			remoteInfo = HTTPS4AllShared;
+		};
+		95A796461FC482BD008B59E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 951DC6791FAA757000B77AE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 951DC6801FAA757000B77AE0;
+			remoteInfo = HTTPS4All;
+		};
+		95A7964D1FC482BD008B59E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 951DC6791FAA757000B77AE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95A796391FC482BD008B59E2;
+			remoteInfo = HTTPS4AllShared;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,24 +75,43 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		95A796541FC482BD008B59E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				95A796501FC482BD008B59E2 /* HTTPS4AllShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		951DC6811FAA757000B77AE0 /* HTTPS All The Things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HTTPS All The Things.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		951DC6811FAA757000B77AE0 /* HTTPS4All.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPS4All.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951DC6841FAA757000B77AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		951DC6861FAA757000B77AE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		951DC6891FAA757000B77AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		951DC68B1FAA757000B77AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		951DC68E1FAA757000B77AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		951DC6901FAA757000B77AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		951DC6951FAA757000B77AE0 /* HTTPS All The ThingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HTTPS All The ThingsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		951DC6951FAA757000B77AE0 /* HTTPS4AllTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPS4AllTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		951DC6991FAA757000B77AE0 /* HTTPS_All_The_ThingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPS_All_The_ThingsTests.swift; sourceTree = "<group>"; };
 		951DC69B1FAA757000B77AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		951DC6A81FAA75B100B77AE0 /* OnlyHTTPS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OnlyHTTPS.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		951DC6AA1FAA75B100B77AE0 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		951DC6AC1FAA75B100B77AE0 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
 		951DC6AE1FAA75B100B77AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95D063051FACD8D5006DF2D2 /* blockerList-mixedcontent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "blockerList-mixedcontent.json"; sourceTree = "<group>"; };
+		95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPS4AllShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A7963C1FC482BD008B59E2 /* HTTPS4AllShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPS4AllShared.h; sourceTree = "<group>"; };
+		95A7963D1FC482BD008B59E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A796421FC482BD008B59E2 /* HTTPS4AllSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPS4AllSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A796491FC482BD008B59E2 /* HTTPS4AllSharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPS4AllSharedTests.swift; sourceTree = "<group>"; };
+		95A7964B1FC482BD008B59E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A7965A1FC48382008B59E2 /* HTTPS4AllShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPS4AllShared.swift; sourceTree = "<group>"; };
+		95A7965C1FC48A24008B59E2 /* example-hosts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "example-hosts.txt"; sourceTree = "<group>"; };
+		95D421931FC309540086A3C5 /* HTTPS4All.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HTTPS4All.entitlements; sourceTree = "<group>"; };
+		95D421941FC309890086A3C5 /* OnlyHTTPS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnlyHTTPS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A7964F1FC482BD008B59E2 /* HTTPS4AllShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +134,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A796591FC482CD008B59E2 /* HTTPS4AllShared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A796361FC482BD008B59E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A7963F1FC482BD008B59E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A796431FC482BD008B59E2 /* HTTPS4AllShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,26 +159,32 @@
 		951DC6781FAA757000B77AE0 = {
 			isa = PBXGroup;
 			children = (
-				951DC6831FAA757000B77AE0 /* HTTPS All The Things */,
-				951DC6981FAA757000B77AE0 /* HTTPS All The ThingsTests */,
+				951DC6831FAA757000B77AE0 /* HTTPS4All */,
+				951DC6981FAA757000B77AE0 /* HTTPS4AllTests */,
 				951DC6A91FAA75B100B77AE0 /* OnlyHTTPS */,
+				95A7963B1FC482BD008B59E2 /* HTTPS4AllShared */,
+				95A796481FC482BD008B59E2 /* HTTPS4AllSharedTests */,
 				951DC6821FAA757000B77AE0 /* Products */,
+				95A796581FC482CD008B59E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		951DC6821FAA757000B77AE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				951DC6811FAA757000B77AE0 /* HTTPS All The Things.app */,
-				951DC6951FAA757000B77AE0 /* HTTPS All The ThingsTests.xctest */,
+				951DC6811FAA757000B77AE0 /* HTTPS4All.app */,
+				951DC6951FAA757000B77AE0 /* HTTPS4AllTests.xctest */,
 				951DC6A81FAA75B100B77AE0 /* OnlyHTTPS.appex */,
+				95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */,
+				95A796421FC482BD008B59E2 /* HTTPS4AllSharedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		951DC6831FAA757000B77AE0 /* HTTPS All The Things */ = {
+		951DC6831FAA757000B77AE0 /* HTTPS4All */ = {
 			isa = PBXGroup;
 			children = (
+				95D421931FC309540086A3C5 /* HTTPS4All.entitlements */,
 				951DC6841FAA757000B77AE0 /* AppDelegate.swift */,
 				951DC6861FAA757000B77AE0 /* ViewController.swift */,
 				951DC6881FAA757000B77AE0 /* Main.storyboard */,
@@ -123,54 +192,93 @@
 				951DC68D1FAA757000B77AE0 /* LaunchScreen.storyboard */,
 				951DC6901FAA757000B77AE0 /* Info.plist */,
 			);
-			path = "HTTPS All The Things";
+			path = HTTPS4All;
 			sourceTree = "<group>";
 		};
-		951DC6981FAA757000B77AE0 /* HTTPS All The ThingsTests */ = {
+		951DC6981FAA757000B77AE0 /* HTTPS4AllTests */ = {
 			isa = PBXGroup;
 			children = (
 				951DC6991FAA757000B77AE0 /* HTTPS_All_The_ThingsTests.swift */,
 				951DC69B1FAA757000B77AE0 /* Info.plist */,
 			);
-			path = "HTTPS All The ThingsTests";
+			path = HTTPS4AllTests;
 			sourceTree = "<group>";
 		};
 		951DC6A91FAA75B100B77AE0 /* OnlyHTTPS */ = {
 			isa = PBXGroup;
 			children = (
-				95D063051FACD8D5006DF2D2 /* blockerList-mixedcontent.json */,
-				951DC6AA1FAA75B100B77AE0 /* blockerList.json */,
+				95D421941FC309890086A3C5 /* OnlyHTTPS.entitlements */,
 				951DC6AC1FAA75B100B77AE0 /* ContentBlockerRequestHandler.swift */,
 				951DC6AE1FAA75B100B77AE0 /* Info.plist */,
 			);
 			path = OnlyHTTPS;
 			sourceTree = "<group>";
 		};
+		95A7963B1FC482BD008B59E2 /* HTTPS4AllShared */ = {
+			isa = PBXGroup;
+			children = (
+				95A7963C1FC482BD008B59E2 /* HTTPS4AllShared.h */,
+				95A7963D1FC482BD008B59E2 /* Info.plist */,
+				95A7965A1FC48382008B59E2 /* HTTPS4AllShared.swift */,
+			);
+			path = HTTPS4AllShared;
+			sourceTree = "<group>";
+		};
+		95A796481FC482BD008B59E2 /* HTTPS4AllSharedTests */ = {
+			isa = PBXGroup;
+			children = (
+				95A796491FC482BD008B59E2 /* HTTPS4AllSharedTests.swift */,
+				95A7964B1FC482BD008B59E2 /* Info.plist */,
+				95A7965C1FC48A24008B59E2 /* example-hosts.txt */,
+			);
+			path = HTTPS4AllSharedTests;
+			sourceTree = "<group>";
+		};
+		95A796581FC482CD008B59E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		95A796371FC482BD008B59E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A7964C1FC482BD008B59E2 /* HTTPS4AllShared.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		951DC6801FAA757000B77AE0 /* HTTPS All The Things */ = {
+		951DC6801FAA757000B77AE0 /* HTTPS4All */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 951DC69E1FAA757000B77AE0 /* Build configuration list for PBXNativeTarget "HTTPS All The Things" */;
+			buildConfigurationList = 951DC69E1FAA757000B77AE0 /* Build configuration list for PBXNativeTarget "HTTPS4All" */;
 			buildPhases = (
 				951DC67D1FAA757000B77AE0 /* Sources */,
 				951DC67E1FAA757000B77AE0 /* Frameworks */,
 				951DC67F1FAA757000B77AE0 /* Resources */,
 				951DC6B51FAA75B100B77AE0 /* Embed App Extensions */,
+				95A796541FC482BD008B59E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				951DC6B01FAA75B100B77AE0 /* PBXTargetDependency */,
+				95A7964E1FC482BD008B59E2 /* PBXTargetDependency */,
 			);
-			name = "HTTPS All The Things";
+			name = HTTPS4All;
 			productName = "HTTPS All The Things";
-			productReference = 951DC6811FAA757000B77AE0 /* HTTPS All The Things.app */;
+			productReference = 951DC6811FAA757000B77AE0 /* HTTPS4All.app */;
 			productType = "com.apple.product-type.application";
 		};
-		951DC6941FAA757000B77AE0 /* HTTPS All The ThingsTests */ = {
+		951DC6941FAA757000B77AE0 /* HTTPS4AllTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 951DC6A11FAA757000B77AE0 /* Build configuration list for PBXNativeTarget "HTTPS All The ThingsTests" */;
+			buildConfigurationList = 951DC6A11FAA757000B77AE0 /* Build configuration list for PBXNativeTarget "HTTPS4AllTests" */;
 			buildPhases = (
 				951DC6911FAA757000B77AE0 /* Sources */,
 				951DC6921FAA757000B77AE0 /* Frameworks */,
@@ -181,9 +289,9 @@
 			dependencies = (
 				951DC6971FAA757000B77AE0 /* PBXTargetDependency */,
 			);
-			name = "HTTPS All The ThingsTests";
+			name = HTTPS4AllTests;
 			productName = "HTTPS All The ThingsTests";
-			productReference = 951DC6951FAA757000B77AE0 /* HTTPS All The ThingsTests.xctest */;
+			productReference = 951DC6951FAA757000B77AE0 /* HTTPS4AllTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		951DC6A71FAA75B100B77AE0 /* OnlyHTTPS */ = {
@@ -203,19 +311,61 @@
 			productReference = 951DC6A81FAA75B100B77AE0 /* OnlyHTTPS.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		95A796391FC482BD008B59E2 /* HTTPS4AllShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95A796511FC482BD008B59E2 /* Build configuration list for PBXNativeTarget "HTTPS4AllShared" */;
+			buildPhases = (
+				95A796351FC482BD008B59E2 /* Sources */,
+				95A796361FC482BD008B59E2 /* Frameworks */,
+				95A796371FC482BD008B59E2 /* Headers */,
+				95A796381FC482BD008B59E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTTPS4AllShared;
+			productName = HTTPS4AllShared;
+			productReference = 95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		95A796411FC482BD008B59E2 /* HTTPS4AllSharedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95A796551FC482BD008B59E2 /* Build configuration list for PBXNativeTarget "HTTPS4AllSharedTests" */;
+			buildPhases = (
+				95A7963E1FC482BD008B59E2 /* Sources */,
+				95A7963F1FC482BD008B59E2 /* Frameworks */,
+				95A796401FC482BD008B59E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95A796451FC482BD008B59E2 /* PBXTargetDependency */,
+				95A796471FC482BD008B59E2 /* PBXTargetDependency */,
+			);
+			name = HTTPS4AllSharedTests;
+			productName = HTTPS4AllSharedTests;
+			productReference = 95A796421FC482BD008B59E2 /* HTTPS4AllSharedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		951DC6791FAA757000B77AE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Bouke van der Bijl";
 				TargetAttributes = {
 					951DC6801FAA757000B77AE0 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					951DC6941FAA757000B77AE0 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -225,10 +375,25 @@
 					951DC6A71FAA75B100B77AE0 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					95A796391FC482BD008B59E2 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					95A796411FC482BD008B59E2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 951DC6801FAA757000B77AE0;
 					};
 				};
 			};
-			buildConfigurationList = 951DC67C1FAA757000B77AE0 /* Build configuration list for PBXProject "HTTPS All The Things" */;
+			buildConfigurationList = 951DC67C1FAA757000B77AE0 /* Build configuration list for PBXProject "HTTPS4All" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -241,9 +406,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				951DC6801FAA757000B77AE0 /* HTTPS All The Things */,
-				951DC6941FAA757000B77AE0 /* HTTPS All The ThingsTests */,
+				951DC6801FAA757000B77AE0 /* HTTPS4All */,
+				951DC6941FAA757000B77AE0 /* HTTPS4AllTests */,
 				951DC6A71FAA75B100B77AE0 /* OnlyHTTPS */,
+				95A796391FC482BD008B59E2 /* HTTPS4AllShared */,
+				95A796411FC482BD008B59E2 /* HTTPS4AllSharedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -270,8 +437,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D063061FACD8D5006DF2D2 /* blockerList-mixedcontent.json in Resources */,
-				951DC6AB1FAA75B100B77AE0 /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A796381FC482BD008B59E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A796401FC482BD008B59E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A7965D1FC48A24008B59E2 /* example-hosts.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,18 +483,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		95A796351FC482BD008B59E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A7965B1FC48382008B59E2 /* HTTPS4AllShared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A7963E1FC482BD008B59E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A7964A1FC482BD008B59E2 /* HTTPS4AllSharedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		951DC6971FAA757000B77AE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 951DC6801FAA757000B77AE0 /* HTTPS All The Things */;
+			target = 951DC6801FAA757000B77AE0 /* HTTPS4All */;
 			targetProxy = 951DC6961FAA757000B77AE0 /* PBXContainerItemProxy */;
 		};
 		951DC6B01FAA75B100B77AE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 951DC6A71FAA75B100B77AE0 /* OnlyHTTPS */;
 			targetProxy = 951DC6AF1FAA75B100B77AE0 /* PBXContainerItemProxy */;
+		};
+		95A796451FC482BD008B59E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95A796391FC482BD008B59E2 /* HTTPS4AllShared */;
+			targetProxy = 95A796441FC482BD008B59E2 /* PBXContainerItemProxy */;
+		};
+		95A796471FC482BD008B59E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 951DC6801FAA757000B77AE0 /* HTTPS4All */;
+			targetProxy = 95A796461FC482BD008B59E2 /* PBXContainerItemProxy */;
+		};
+		95A7964E1FC482BD008B59E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95A796391FC482BD008B59E2 /* HTTPS4AllShared */;
+			targetProxy = 95A7964D1FC482BD008B59E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -451,15 +662,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HTTPS4All/HTTPS4All.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RBL6753PA7;
-				INFOPLIST_FILE = "HTTPS All The Things/Info.plist";
+				INFOPLIST_FILE = HTTPS4All/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.bouk.HTTPSAllTheThings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -468,16 +681,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HTTPS4All/HTTPS4All.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RBL6753PA7;
-				INFOPLIST_FILE = "HTTPS All The Things/Info.plist";
+				INFOPLIST_FILE = HTTPS4All/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.bouk.HTTPSAllTheThings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -494,7 +709,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTTPS All The Things.app/HTTPS All The Things";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTTPS4All.app/HTTPS4All";
 			};
 			name = Debug;
 		};
@@ -512,13 +727,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTTPS All The Things.app/HTTPS All The Things";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTTPS4All.app/HTTPS4All";
 			};
 			name = Release;
 		};
 		951DC6B31FAA75B100B77AE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OnlyHTTPS/OnlyHTTPS.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RBL6753PA7;
@@ -530,13 +746,14 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		951DC6B41FAA75B100B77AE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OnlyHTTPS/OnlyHTTPS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -549,14 +766,103 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		95A796521FC482BD008B59E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RBL6753PA7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HTTPS4AllShared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.bouk.HTTPS4AllShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		95A796531FC482BD008B59E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RBL6753PA7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HTTPS4AllShared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.bouk.HTTPS4AllShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		95A796561FC482BD008B59E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RBL6753PA7;
+				INFOPLIST_FILE = HTTPS4AllSharedTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.bouk.HTTPS4AllSharedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTTPS4All.app/HTTPS4All";
+			};
+			name = Debug;
+		};
+		95A796571FC482BD008B59E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RBL6753PA7;
+				INFOPLIST_FILE = HTTPS4AllSharedTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.bouk.HTTPS4AllSharedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTTPS4All.app/HTTPS4All";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		951DC67C1FAA757000B77AE0 /* Build configuration list for PBXProject "HTTPS All The Things" */ = {
+		951DC67C1FAA757000B77AE0 /* Build configuration list for PBXProject "HTTPS4All" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				951DC69C1FAA757000B77AE0 /* Debug */,
@@ -565,7 +871,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		951DC69E1FAA757000B77AE0 /* Build configuration list for PBXNativeTarget "HTTPS All The Things" */ = {
+		951DC69E1FAA757000B77AE0 /* Build configuration list for PBXNativeTarget "HTTPS4All" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				951DC69F1FAA757000B77AE0 /* Debug */,
@@ -574,7 +880,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		951DC6A11FAA757000B77AE0 /* Build configuration list for PBXNativeTarget "HTTPS All The ThingsTests" */ = {
+		951DC6A11FAA757000B77AE0 /* Build configuration list for PBXNativeTarget "HTTPS4AllTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				951DC6A21FAA757000B77AE0 /* Debug */,
@@ -588,6 +894,24 @@
 			buildConfigurations = (
 				951DC6B31FAA75B100B77AE0 /* Debug */,
 				951DC6B41FAA75B100B77AE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95A796511FC482BD008B59E2 /* Build configuration list for PBXNativeTarget "HTTPS4AllShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95A796521FC482BD008B59E2 /* Debug */,
+				95A796531FC482BD008B59E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95A796551FC482BD008B59E2 /* Build configuration list for PBXNativeTarget "HTTPS4AllSharedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95A796561FC482BD008B59E2 /* Debug */,
+				95A796571FC482BD008B59E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
