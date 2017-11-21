@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import HTTPS_All_The_Things
+@testable import HTTPS4All
 
-class HTTPS_All_The_ThingsTests: XCTestCase {
+class HTTPS4AllTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
