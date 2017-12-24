@@ -11,12 +11,12 @@ import SafariServices
 import UIKit
 
 let hostsURL = URL(string: "https://hosts.https4all.org/hosts.txt")!
+let lastUpdated = "last-updated"
 
 class ViewController: UIViewController {
 
 	@IBOutlet var updateLabel: UILabel!
 	@IBOutlet var versionLabel: UILabel!
-	var currentDate: Date? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,11 @@ class ViewController: UIViewController {
     }
 
 	func updateHosts() {
+		if let date = UserDefaults.standard.object(forKey: lastUpdated) as? Date, date > Date().addingTimeInterval(-12 * 60 * 60) {
+			let numberOfDomains = (try? readHosts())?.count
+			self.updateLabels(date: date, numberOfDomains: numberOfDomains)
+			return
+		}
 		updateLabel.text = "Updating..."
 
 		URLSession.shared.downloadTask(with: hostsURL) { location, response, error in
@@ -43,30 +48,39 @@ class ViewController: UIViewController {
 				return
 			}
 			guard let location = location else { return }
-			self.currentDate = (response.allHeaderFields["Last-Modified"] as? String).flatMap(parseRFC1123)
+			let date = (response.allHeaderFields["Last-Modified"] as? String).flatMap(parseRFC1123)
 
-			try! self.replaceHostsFile(with: location)
+			try! self.replaceHostsFile(with: location, date: date)
 			}.resume()
 	}
 
-	func replaceHostsFile(with location: URL) throws {
+	func replaceHostsFile(with location: URL, date: Date?) throws {
 		let hostsFile = hostsFileLocation()
 		try FileManager.default.replaceItem(at: hostsFile, withItemAt: location, backupItemName: nil, resultingItemURL: nil)
 		let hosts = try readHosts()
 
-		let n = NumberFormatter.localizedString(from: NSNumber(value: hosts.count), number: NumberFormatter.Style.decimal)
 		DispatchQueue.main.async {
-			self.updateLabel.text = "Updated! \(n) domains included."
-
-			let format = DateFormatter()
-			format.dateFormat = "yyyy-MM-dd"
-			let version = self.currentDate.map(format.string) ?? "unknown"
-			self.versionLabel.text = "Version: \(version)"
+			UserDefaults.standard.set(date, forKey: lastUpdated)
+			self.updateLabels(date: date, numberOfDomains: hosts.count)
 		}
 
 		SFContentBlockerManager.reloadContentBlocker(withIdentifier: contentBlockerIdentifier) { error in
 			guard let error = error else { return }
 			print(error.localizedDescription)
+		}
+	}
+
+	func updateLabels(date: Date?, numberOfDomains: Int?) {
+		let format = DateFormatter()
+		format.dateFormat = "yyyy-MM-dd"
+		let version = date.map(format.string) ?? "unknown"
+		self.versionLabel.text = "Version: \(version)"
+
+		if let numberOfDomains = numberOfDomains {
+			let n = NumberFormatter.localizedString(from: NSNumber(value: numberOfDomains), number: NumberFormatter.Style.decimal)
+			self.updateLabel.text = "You are up-to-date.\n\(n) domains included."
+		} else {
+			self.updateLabel.text = ""
 		}
 	}
 }
