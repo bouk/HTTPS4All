@@ -15,6 +15,7 @@
 		951DC69A1FAA757000B77AE0 /* HTTPS4AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951DC6991FAA757000B77AE0 /* HTTPS4AllTests.swift */; };
 		951DC6AD1FAA75B100B77AE0 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951DC6AC1FAA75B100B77AE0 /* ContentBlockerRequestHandler.swift */; };
 		951DC6B11FAA75B100B77AE0 /* OnlyHTTPS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 951DC6A81FAA75B100B77AE0 /* OnlyHTTPS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		958407861FF01CB70031A892 /* SiteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958407851FF01CB70031A892 /* SiteTableViewController.swift */; };
 		95A796431FC482BD008B59E2 /* HTTPS4AllShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */; };
 		95A7964A1FC482BD008B59E2 /* HTTPS4AllSharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A796491FC482BD008B59E2 /* HTTPS4AllSharedTests.swift */; };
 		95A7964C1FC482BD008B59E2 /* HTTPS4AllShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 95A7963C1FC482BD008B59E2 /* HTTPS4AllShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -102,6 +103,7 @@
 		951DC6A81FAA75B100B77AE0 /* OnlyHTTPS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OnlyHTTPS.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		951DC6AC1FAA75B100B77AE0 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
 		951DC6AE1FAA75B100B77AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		958407851FF01CB70031A892 /* SiteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteTableViewController.swift; sourceTree = "<group>"; };
 		95A7963A1FC482BD008B59E2 /* HTTPS4AllShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPS4AllShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A7963C1FC482BD008B59E2 /* HTTPS4AllShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPS4AllShared.h; sourceTree = "<group>"; };
 		95A7963D1FC482BD008B59E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				951DC68B1FAA757000B77AE0 /* Assets.xcassets */,
 				951DC68D1FAA757000B77AE0 /* LaunchScreen.storyboard */,
 				951DC6901FAA757000B77AE0 /* Info.plist */,
+				958407851FF01CB70031A892 /* SiteTableViewController.swift */,
 			);
 			path = HTTPS4All;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			files = (
 				951DC6871FAA757000B77AE0 /* ViewController.swift in Sources */,
 				951DC6851FAA757000B77AE0 /* AppDelegate.swift in Sources */,
+				958407861FF01CB70031A892 /* SiteTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

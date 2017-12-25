@@ -16,7 +16,6 @@ let lastUpdated = "last-updated"
 class ViewController: UIViewController {
 
 	@IBOutlet var updateLabel: UILabel!
-	@IBOutlet var versionLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,14 +73,21 @@ class ViewController: UIViewController {
 		let format = DateFormatter()
 		format.dateFormat = "yyyy-MM-dd"
 		let version = date.map(format.string) ?? "unknown"
-		self.versionLabel.text = "Version: \(version)"
 
 		if let numberOfDomains = numberOfDomains {
 			let n = NumberFormatter.localizedString(from: NSNumber(value: numberOfDomains), number: NumberFormatter.Style.decimal)
-			self.updateLabel.text = "You are up-to-date.\n\(n) domains included."
+			self.updateLabel.text = "\(n) sites included.\nThe version of the host list is \(version)."
 		} else {
-			self.updateLabel.text = ""
+			self.updateLabel.text = "The version of the host list is \(version)."
 		}
+	}
+
+	@IBAction func moreInformation() {
+		UIApplication.shared.open(URL(string: "https://https4all.org/")!)
+	}
+
+	@IBAction func donate() {
+		UIApplication.shared.open(URL(string: "https://supporters.eff.org/donate")!)
 	}
 }
 
