@@ -68,6 +68,6 @@ class SiteTableViewController: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-		return keys.index(of: title)!
+		return keys.firstIndex(of: title)!
 	}
 }
